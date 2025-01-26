@@ -21,7 +21,9 @@ jobs:
 
     - name: Prepare the environment
       run: |
-        sudo apt install git wget lz4 tar openssl python3 -y
+        sudo apt update
+        sudo apt install git wget lz4 tar openssl python3 python3-pip -y
+        pip3 install avbtool  # Install avbtool using pip (if required)
 
     - name: Fetch image from URL
       run: |
